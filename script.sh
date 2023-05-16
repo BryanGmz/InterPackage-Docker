@@ -22,7 +22,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-resource-1
     docker rm interpackage-docker-interpackage-service-resource-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-resource
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-resource
     ;;
   1)
     # Discover
@@ -31,7 +31,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-discovery-1
     docker rm interpackage-docker-interpackage-service-discovery-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-discovery
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-discovery
     ;;
   2)
     # Gateway
@@ -40,7 +40,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-gateway-1
     docker rm interpackage-docker-interpackage-service-gateway-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-gateway
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-gateway
     ;;
   3)
     # Notification
@@ -49,7 +49,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-notification-1
     docker rm interpackage-docker-interpackage-service-notification-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-notification
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-notification
     ;;
   4)
     # Payments
@@ -58,7 +58,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-payment-1
     docker rm interpackage-docker-interpackage-service-payment-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-payment
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-payment
     ;;
   5)
     # Tracking
@@ -67,7 +67,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-tracking-1
     docker rm interpackage-docker-interpackage-service-tracking-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-tracking
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-tracking
     ;;
   6)
     # Users
@@ -76,7 +76,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-users-1
     docker rm interpackage-docker-interpackage-service-users-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-users
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-users
     ;;
 
   7)
@@ -86,7 +86,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-cards-1
     docker rm interpackage-docker-interpackage-service-cards-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-cards
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-cards
     ;;
 
   8)
@@ -96,7 +96,7 @@ case $option in
 
     docker stop interpackage-docker-interpackage-service-package-1
     docker rm interpackage-docker-interpackage-service-package-1
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-package
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-package
     ;;
 
   9)
@@ -148,15 +148,15 @@ case $option in
     docker rm interpackage-docker-interpackage-service-cards-1
     docker rm interpackage-docker-interpackage-service-package-1
 
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-resource
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-discovery
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-gateway
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-notification
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-payment
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-tracking    
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-users
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-cards
-    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-package
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-resource
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-discovery
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-gateway
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-notification
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-payment
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-tracking    
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-users
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-cards
+    cd /home/Interpackage/InterPackage-Docker && docker-compose up -d --build interpackage-service-package
     ;;
 
   *)
