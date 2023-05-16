@@ -1,19 +1,29 @@
 #!/bin/bash
 
 echo "Selecciona el servicio que deseas ejecutar:"
+echo "0. Resources"
 echo "1. Discover"
 echo "2. Gateway"
 echo "3. Notification"
 echo "4. Payments"
 echo "5. Tracking"
 echo "6. Users"
-echo "7. Users"
-echo "8. Users"
+echo "7. Cards"
+echo "8. Package"
 echo "9. Todos"
 
 read option
 
 case $option in
+  0)
+    # Resources
+    cd /home/Interpackage/InterPackage-Resources && git pull origin main && mvn clean install -DskipTests
+    echo "Resultado de Resources: $?"
+
+    docker stop docker-interpackage-service-resource-1
+    docker rm docker-interpackage-service-resource-1
+    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-resource
+    ;;
   1)
     # Discover
     cd /home/Interpackage/InterPackage-Discovery-Server && git pull origin main && mvn clean install -DskipTests
@@ -91,7 +101,9 @@ case $option in
 
   9)
     # Todos
-    
+    cd /home/Interpackage/InterPackage-Resources && git pull origin main && mvn clean install -DskipTests
+    echo "Resultado de Resources: $?"
+
     cd /home/Interpackage/InterPackage-Discovery-Server && git pull origin main && mvn clean install -DskipTests
     echo "Resultado de Discover: $?"
     
@@ -116,6 +128,7 @@ case $option in
     cd /home/Interpackage/InterPackage-Package && git pull origin master && mvn clean install -DskipTests
     echo "Resultado de Package: $?"
 
+    docker stop docker-interpackage-service-resource-1
     docker stop docker-interpackage-service-discovery-1
     docker stop docker-interpackage-service-gateway-1
     docker stop docker-interpackage-service-notification-1
@@ -125,6 +138,7 @@ case $option in
     docker stop docker-interpackage-service-cards-1
     docker stop docker-interpackage-service-package-1
     
+    docker rm docker-interpackage-service-resource-1
     docker rm docker-interpackage-service-discovery-1
     docker rm docker-interpackage-service-gateway-1
     docker rm docker-interpackage-service-notification-1
@@ -133,7 +147,8 @@ case $option in
     docker rm docker-interpackage-service-users-1
     docker rm docker-interpackage-service-cards-1
     docker rm docker-interpackage-service-package-1
-    
+
+    cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-resource
     cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-discovery
     cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-gateway
     cd /home/Interpackage/docker && docker-compose up -d --build interpackage-service-notification
