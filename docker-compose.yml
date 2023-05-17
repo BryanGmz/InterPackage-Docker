@@ -43,7 +43,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_CARDS}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -71,7 +71,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_NOTIFICATION}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -90,7 +90,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_PACKAGE}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -109,7 +109,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_PAYMENT}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -128,7 +128,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_RESOURCES}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -147,7 +147,7 @@ services:
       - .env
 
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_TRACKING}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -166,7 +166,7 @@ services:
     env_file:
       - .env
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://167.172.108.85:5432/${DB_USERS}
       - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
