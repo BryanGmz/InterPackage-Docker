@@ -95,6 +95,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - eureka.client.serviceUrl.defaultZone=http://interpackage-service-discovery:8761/eureka/
+      - spring.kafka.consumer.bootstrap-servers=kafka:9092
       - SPRING_KAFKA_BOOTSTRAP-SERVERS= kafka:9092
       - spring.kafka.producer.bootstrap-servers=kafka:9092
 
@@ -137,6 +138,8 @@ services:
       - eureka.client.serviceUrl.defaultZone=http://interpackage-service-discovery:8761/eureka/
       - SPRING_KAFKA_CONSUMER_GROUP_ID=email
       - spring.kafka.consumer.bootstrap-servers=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS= kafka:9092
+      - spring.kafka.producer.bootstrap-servers=kafka:9092
 
   interpackage-service-tracking:
     build: ../InterPackage-Tracking/
@@ -156,6 +159,8 @@ services:
       - eureka.client.serviceUrl.defaultZone=http://interpackage-service-discovery:8761/eureka/
       - SPRING_KAFKA_CONSUMER_GROUP_ID=email
       - spring.kafka.consumer.bootstrap-servers=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS= kafka:9092
+      - spring.kafka.producer.bootstrap-servers=kafka:9092
 
   interpackage-service-users:
     build:  ../InterPackage-Users/
@@ -174,4 +179,6 @@ services:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_KAFKA_BOOTSTRAP-SERVERS= kafka:9092
       - eureka.client.serviceUrl.defaultZone=http://interpackage-service-discovery:8761/eureka
+      - spring.kafka.consumer.bootstrap-servers=kafka:9092
+      - SPRING_KAFKA_BOOTSTRAP-SERVERS= kafka:9092
       - spring.kafka.producer.bootstrap-servers=kafka:9092
